@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - My E-Commerce Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: white;
+            color: #10221b;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: #10221b;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #219150;
+        }
+        .logo {
+            color: #10221b;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .logo .icon {
+            color: #219150;
+        }
+        .signup-section {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .signup-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-section input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #10221b;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .signup-section button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            color: white;
+            background-color: #10221b;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .signup-section button:hover {
+            background-color: #219150;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #10221b;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .password-toggle {
+            position: relative;
+        }
+        .password-toggle input {
+            width: 100%;
+            padding-right: 40px;
+        }
+        .password-toggle .toggle-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #10221b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="#" class="logo"><i class="fas fa-shoe-prints icon"></i> Shoes</a>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#products">Product</a></li>
+            <li><a href="index.html#review">Review</a></li>
+            <li><a href="index.html#featured">Featured</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Signup Section -->
+    <div class="signup-section">
+        <h2>Signup</h2>
+        <form method="post" action="signup.php">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <div class="password-toggle">
+                
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye toggle-icon" id="togglePassword"></i>
+            </div>
+            <button type="submit" name="signup">Signup</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; copyright @ 2024 by Vishal</p>
+    </footer>
+
+    <!-- JavaScript for Show/Hide Password -->
+    <script>
+        // Show/Hide password on eye icon click
+        document.getElementById("togglePassword").addEventListener("click", function() {
+            const passwordField = document.getElementById("password");
+            const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+            passwordField.setAttribute("type", type);
+            this.classList.toggle("fa-eye-slash");
+        });
+    </script>
+</body>
+</html>

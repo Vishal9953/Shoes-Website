@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Yahan apna CSS file link karo -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4; /* Light background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .logout-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+        .logout-container h1 {
+            color: #10221b; /* Dark green from your theme */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .logout-container p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .logout-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #10221b; /* Same button color as the navbar */
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .logout-btn:hover {
+            background-color: #00bcd4; /* Hover color */
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 10px;
+            color: #10221b;
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #00bcd4; /* Hover effect */
+        }
+    </style>
+</head>
+<body>
+
+<div class="logout-container">
+    <h1>You have logged out successfully!</h1>
+    <p>Thank you for visiting Fashion Hub. We hope to see you again soon.</p>
+    <a href="index.html" class="logout-btn">Go to Home Page</a>
+    <br>
+    <a href="login.html" class="back-btn">Back to Login</a>
+</div>
+
+<script>
+// Optional: Logout process confirmation (in case user tries to logout again)
+// Set loggedOut to true when user logs out (you can trigger this action when user clicks logout)
+document.addEventListener("DOMContentLoaded", function() {
+    // Set the loggedOut flag to true when the user logs out
+    sessionStorage.setItem("loggedOut", "true");
+
+    // Check if the logout flag is set in sessionStorage
+    const userLoggedOut = sessionStorage.getItem("loggedOut");
+
+    if (userLoggedOut === "true") {
+        // Reset the logged out status (optional: to prevent it from showing again)
+        sessionStorage.removeItem("loggedOut");
+
+        // Show a confirmation message for logout
+        alert("You have logged out successfully!");
+    } else {
+        // If no logout confirmation, redirect to login or home if needed
+        window.location.href = "index.html"; // or wherever you want
+    }
+});
+</script>
+
+</body>
+</html>

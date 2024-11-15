@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - My E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include your main CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #10221b;
+            color: white;
+            font-size: 1.2rem; /* Navbar links ka font size */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* latest product */
+        .products .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .products .box-container .box {
+            position: relative;
+            background: #f9f9f9;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: .1rem solid rgba(0,0,0,0.3);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+        }
+
+        .products .box-container .box .image {
+            height: 35rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .products .box-container .box .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .products .box-container .box:hover .image img {
+            transform: scale(1.1);
+        }
+
+        .products .box-container .box .content {
+            padding: 1.5rem 2rem;
+        }
+
+        .products .box-container .box .content h3 {
+            font-size: 2rem;
+            color: #10221b;
+        }
+
+        .products .box-container .box .content .price {
+            font-size: 1.7rem;
+            color: #666;
+            padding: .5rem 0;
+        }
+
+        .products .box-container .box .content .stars {
+            font-size: 1.7rem;
+        }
+
+        .products .box-container .box .content .stars i {
+            color: gold;
+        }
+
+        .products .box-container .box .content .stars span {
+            color: #666;
+        }
+
+        .products .box-container .box .content .btn {
+            position: absolute;
+            bottom: 0; right: 0;
+            display: flex;
+            font-size: 2rem;
+            padding: 1.2rem 1.25rem;
+            border-radius: 1rem 0 1rem 0;
+        }
+        /* end */
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <i class="icon"></i> Shoes
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Product</a></li>
+            <li><a href="reviews.html">Review</a></li>
+            <li><a href="featured.html">Featured</a></li>
+            <li><a href="content.html">Content</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- latest product section starts -->
+    <section class="products" id="products">
+        <h1 class="heading"><span>latest</span> products</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>nike shoes</h3>
+                    <div class="price"> ₹1400</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product-2.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>nike shoes</h3>
+                    <div class="price"> ₹700</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product-3.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>nike shoes</h3>
+                    <div class="price"> ₹1000</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product-4.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>nike shoes</h3>
+                    <div class="price"> ₹800</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product-5.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>nike shoes</h3>
+                    <div class="price"> ₹1200</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>nike shoes</h3>
+                    <div class="price"> ₹1500</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- latest product section ends -->
+    
+    <script src="script.js"></script> <!-- Include your main JS file -->
+</body>
+</html>
